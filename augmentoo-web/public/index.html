@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindAR Image Targets Compiler</title>
+    <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>MindAR Image Targets Compiler</h1>
+        <p class="description">
+            Before working on the webpage, we first need to preprocess (a.k.a. compile) the images. 
+            We need to scan the images and extract interesting locations (a.k.a. feature points) so we 
+            can detect and track the images later. This preprocessing step takes time, therefore we 
+            want to do it beforehand as to reduce the loading time when users actually use your AR app later.
+        </p>
+        
+        <div class="upload-area" id="uploadArea">
+            <input type="file" id="fileInput" accept="image/*" multiple>
+            <label for="fileInput" class="upload-label">
+                <span>Select or drop images here</span>
+            </label>
+        </div>
+        
+        <div class="controls">
+            <button id="compileBtn" disabled>Compile Selected Images</button>
+            <div class="options">
+                <label>
+                    <input type="checkbox" id="debugMode"> Debug Mode
+                </label>
+            </div>
+        </div>
+        
+        <div class="output" id="output">
+            <h2>Compiled Targets</h2>
+            <div class="results" id="results"></div>
+            <button id="downloadAllBtn" style="display: none;">Download All</button>
+        </div>
+    </div>
+    
+    <script src="/src/index.js" type="module"></script>
+</body>
+</html>

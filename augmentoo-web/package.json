@@ -1,0 +1,14 @@
+{
+    "name": "mindar-image-compiler",
+    "version": "1.0.0",
+    "scripts": {
+      "build": "cp -r src public/src && cp -r assets public/assets",
+      "dev": "serve public"
+    },
+    "dependencies": {
+      "mind-ar": "^1.2.0"
+    },
+    "devDependencies": {
+      "serve": "^14.0.1"
+    }
+  }
